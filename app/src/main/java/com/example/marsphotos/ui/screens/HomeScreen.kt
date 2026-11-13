@@ -33,6 +33,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.marsphotos.R
+import com.example.marsphotos.model.MarsPhoto
 import com.example.marsphotos.ui.theme.MarsPhotosTheme
 
 @Composable
@@ -110,8 +111,9 @@ fun ErrorScreenPreview() {
 
 @Preview(showBackground = true)
 @Composable
-fun ResultScreenPreview() {
+fun PhotosGridScreenPreview() {
     MarsPhotosTheme {
-        ResultScreen(stringResource(R.string.placeholder_result))
+        val mockData = List(10) { MarsPhoto("$it", "") }
+        ResultScreen(stringResource(R.string.placeholder_success))
     }
 }
